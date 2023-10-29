@@ -8,7 +8,7 @@ import Paper from '@mui/material/Paper'; // Import the Paper component
 import { Box, Container } from '@mui/material';
 
 
-const CardComponent = () => {
+const CardComponent = ({ jsonData }) => {
     return (
 
         <Grid container spacing={2}>
@@ -18,7 +18,7 @@ const CardComponent = () => {
                         <CardHeader title="Card 1" />
                         <CardContent>
                             <Typography variant="body2" color="#FF5301">
-                                This is the content for Card 1.
+                                {(jsonData.Positive * 100).toFixed(2)}
                             </Typography>
                         </CardContent>
                     </Card>
@@ -30,7 +30,7 @@ const CardComponent = () => {
                         <CardHeader title="Card 2" />
                         <CardContent>
                             <Typography variant="body2" color="#FF5301">
-                                This is the content for Card 2.
+                                {(jsonData.Negative * 100).toFixed(2)}
                             </Typography>
                         </CardContent>
                     </Card>
@@ -42,7 +42,7 @@ const CardComponent = () => {
                         <CardHeader title="Card 3" />
                         <CardContent>
                             <Typography variant="body2" color="#FF5301">
-                                This is the content for Card 3.
+                                {(jsonData.Neutral * 100).toFixed(2)}
                             </Typography>
                         </CardContent>
                     </Card>

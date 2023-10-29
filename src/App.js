@@ -3,6 +3,7 @@ import ResponsiveAppBar from "./Components/ResponsiveAppBar";
 import MainDashboard from "./Pages/MainDashboard";
 import AnalysisBoard from "./Pages/AnalysisBoard";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import AllAnalysisboardcomponent from "./Components/AllAnalysisBoardComponents/AllAnalysisboardcomponent";
 
 export const Layout = ({ children }) => {
   return (
@@ -35,6 +36,14 @@ function App() {
             element={
               <Layout>
                 <AnalysisBoard />
+              </Layout>
+            }
+          ></Route>
+          <Route
+            path="/allanalysis"
+            element={
+              <Layout>
+                <AllAnalysisboardcomponent />
               </Layout>
             }
           ></Route>

@@ -8,7 +8,7 @@ const AnalysisBoard = () => {
     const [objects, setObjects] = useState("");
     const [selectedObject, setSelectedObject] = useState(null);
     const [selectedValues, setSelectedValues] = useState([]);
-
+    const [jsonData, setJsonData] = useState({});
 
 
     useEffect(() => {
@@ -37,9 +37,22 @@ const AnalysisBoard = () => {
                 { value: selected.content.Neutral, label: 'Neutral' },
                 // Add more properties as needed
             ];
+            // Positive: { value: selected.content.Positive },
+            //     Negative: { value: selected.content.Negative },
+            //     Neutral: { value: selected.content.Neutral },
+            const carddata = {
+
+                Positive: selected.content.Positive,
+                Negative: selected.content.Negative,
+                Neutral: selected.content.Neutral,
+                // Add more properties as needed
+            };
             setSelectedValues(data);
+            setJsonData(carddata);
+
             // You can now pass the data array to the Pie component
         }
+
     };
 
 
@@ -93,9 +106,9 @@ const AnalysisBoard = () => {
                     {selectedObject && (
                         <Box mb={5}>
                             <Pie selectedValues={selectedValues} />
+                            <CardComponent jsonData={jsonData} />
                         </Box>
                     )}
-                    <CardComponent />
                 </div>
             </Box>
         </Container>

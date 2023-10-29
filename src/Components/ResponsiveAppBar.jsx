@@ -14,7 +14,7 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { Link, useNavigate } from "react-router-dom";
 import { Grid } from '@mui/material';
-const pages = ['Analysis Board'];
+const pages = ['Analysis Board', "Prediction"];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 
@@ -43,6 +43,10 @@ function ResponsiveAppBar() {
   }
   const analysisboard = () => {
     navigate(`/analysisboard`)
+    // redirect to home page
+  }
+  const allanalysis = () => {
+    navigate(`/allanalysis`)
     // redirect to home page
   }
   // const appBarStyle = {
@@ -145,16 +149,26 @@ function ResponsiveAppBar() {
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {
 
-              <Button
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
+              <>
+                <Button
+                  onClick={handleCloseNavMenu}
+                  sx={{ my: 2, color: 'white', display: 'block' }}
+                >
 
-                <Typography onClick={analysisboard} >Analysis Board</Typography>
-              </Button>
+                  <Typography onClick={analysisboard} >Analysis Board</Typography>
+                </Button>
+                <Button
+                  onClick={handleCloseNavMenu}
+                  sx={{ my: 2, color: 'white', display: 'block' }}
+                >
+
+                  <Typography onClick={allanalysis} >AllAnalysisboardcomponent</Typography>
+                </Button>
+              </>
 
             }
           </Box>
+
 
           {/* profile settings */}
           <Box sx={{ flexGrow: 0 }}>
