@@ -48,8 +48,8 @@ import * as React from 'react';
 import { PieChart, pieArcLabelClasses } from '@mui/x-charts/PieChart';
 
 const size = {
-    width: 1000,
-    height: 430,
+    width: 400,
+    height: 400,
 };
 const colors = ['teal', 'magenta', 'gold'];
 
