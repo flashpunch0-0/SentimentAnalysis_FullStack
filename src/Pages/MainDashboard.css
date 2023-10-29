@@ -1,0 +1,65 @@
+/* styles.css */
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.main-container {
+  /* display: flex; */
+  padding: 0;
+  margin: 0;
+  /* height: 90vh; */
+  /* min-height: 9vh; */
+}
+
+.first-section {
+  flex: 1;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.second-section {
+  flex: 1;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* writing code for text css on the main page
+ */
+.centered-text {
+  /* display: flex; */
+  /* align-items: center;
+  justify-content: center; */
+  padding: 0;
+  margin: 0;
+  /* height: 100vh; */
+}
+
+.big-text {
+  /* font-size: 4rem; */
+  font-weight: 700;
+  color: white;
+  text-align: center;
+}
+
+.wide-text {
+  letter-spacing: 4px; /* Adjust the letter spacing as needed */
+}
+
+.textImageWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin: 2%; */
+}
+
+/* .text,
+.image {
+  flex: 1;
+  padding: 10px; Add padding as needed
+} */
