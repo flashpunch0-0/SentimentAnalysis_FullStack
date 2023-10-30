@@ -32,6 +32,7 @@ const mongoURI = process.env.MONGODB_URI;
 mongoose.set("strictQuery", false);
 mongoose
   .connect(mongoURI)
+  // updated
   .then(() => {
     console.log("connected to MongoDB");
     app.listen(3000, () => {
