@@ -35,19 +35,29 @@ const AnalysisBoard = () => {
         setSelectedObject(selected);
         if (selected) {
             const data = [
-                { value: selected.content.Positive, label: 'Positive' },
-                { value: selected.content.Negative, label: 'Negative' },
-                { value: selected.content.Neutral, label: 'Neutral' },
+                { value: selected.content["Positive %"], label: 'Positive' },
+                { value: selected.content["Negative %"], label: 'Negative' },
+                { value: selected.content[["Neutral %"]], label: 'Neutral' },
                 // Add more properties as needed
             ];
+            // const data = [
+            //     { value: selected.content.Positive, label: 'Positive' },
+            //     { value: selected.content.Negative, label: 'Negative' },
+            //     { value: selected.content.Neutral, label: 'Neutral' },
+            //     // Add more properties as needed
+            // ];
             // Positive: { value: selected.content.Positive },
             //     Negative: { value: selected.content.Negative },
             //     Neutral: { value: selected.content.Neutral },
             const carddata = {
 
-                Positive: selected.content.Positive,
-                Negative: selected.content.Negative,
-                Neutral: selected.content.Neutral,
+                // Positive: selected.content.Positive,
+                Positive: selected.content["Positive %"],
+                Negative: selected.content["Negative %"],
+                Neutral: selected.content[["Neutral %"]],
+                User: selected.content.User,
+                NotSpamProbability: selected.content['Not Spam Probability'],
+                TwwetDate: selected.content['Tweet Date'].split('T')[0],
                 // Add more properties as needed
             };
             setSelectedValues(data);
@@ -169,6 +179,15 @@ const AnalysisBoard = () => {
                                 </Typography>
                                 <Typography variant="body2" color="#FF5301">
                                     {(jsonData.Positive * 100).toFixed(2)}
+                                </Typography>
+                                <Typography variant="body2" color="#FF5301">
+                                    {jsonData.User}
+                                </Typography>
+                                <Typography variant="body2" color="#FF5301">
+                                    {jsonData.NotSpamProbability}
+                                </Typography>
+                                <Typography variant="body2" color="#FF5301">
+                                    {jsonData.TwwetDate}
                                 </Typography>
                             </Paper>
                         </Grid>
