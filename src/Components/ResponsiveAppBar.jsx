@@ -16,7 +16,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { Grid } from '@mui/material';
 const pages = ['Analysis Board', "Prediction"];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
-
+// import '../Pages/MainDashboard.css'
 
 function ResponsiveAppBar() {
   const navigate = useNavigate()
@@ -155,14 +155,14 @@ function ResponsiveAppBar() {
                   sx={{ my: 2, color: 'white', display: 'block' }}
                 >
 
-                  <Typography onClick={analysisboard} >Analysis Board</Typography>
+                  <Typography onClick={analysisboard} fontFamily="'Nunito', sans-serif" >Analysis Board</Typography>
                 </Button>
                 <Button
                   onClick={handleCloseNavMenu}
                   sx={{ my: 2, color: 'white', display: 'block' }}
                 >
 
-                  <Typography onClick={allanalysis} >AllAnalysisboardcomponent</Typography>
+                  <Typography onClick={allanalysis} fontFamily="'Nunito', sans-serif" >AllAnalysisboardcomponent</Typography>
                 </Button>
               </>
 

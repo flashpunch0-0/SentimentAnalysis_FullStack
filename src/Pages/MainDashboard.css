@@ -1,12 +1,15 @@
 /* styles.css */
+
 html,
 body {
   margin: 0;
   padding: 0;
 }
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
 
 .main-container {
   /* display: flex; */
+  font-family: "Montserrat", sans-serif;
   padding: 0;
   margin: 0;
   /* height: 90vh; */
@@ -31,7 +34,11 @@ body {
 
 /* writing code for text css on the main page
  */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+
 .centered-text {
+  font-family: "Nunito", sans-serif;
   /* display: flex; */
   /* align-items: center;
   justify-content: center; */
@@ -42,6 +49,7 @@ body {
 
 .big-text {
   /* font-size: 4rem; */
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   color: white;
   text-align: center;
@@ -63,3 +71,21 @@ body {
   flex: 1;
   padding: 10px; Add padding as needed
 } */
+.animated-header {
+  animation: slideIn 0.7s ease-in-out;
+}
+
+.animated-header2 {
+  animation: slideIn 1.35s ease-in-out;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
