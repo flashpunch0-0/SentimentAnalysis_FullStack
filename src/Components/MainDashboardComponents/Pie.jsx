@@ -46,10 +46,10 @@
 
 import * as React from 'react';
 import { PieChart, pieArcLabelClasses } from '@mui/x-charts/PieChart';
-
+import { Grid } from '@mui/material';
 const size = {
-    width: 400,
-    height: 400,
+    width: 550,
+    height: 530,
 };
 const colors = ['teal', 'magenta', 'gold'];
 
@@ -63,34 +63,69 @@ export default function PieArcLabel({ selectedValues }) {
         },
     };
 
+    // return (
+    //     <PieChart
+    //         series={[
+    //             {
+    //                 arcLabel: (item) => `${item.label} (${item.value})`,
+    //                 arcLabelMinAngle: 45,
+    //                 data: selectedValues.map((item, index) => ({
+    //                     ...item,
+    //                     color: colors[index % colors.length],
+    //                 })),
+    //             },
+
+    //         ]}
+    //         sx={{
+    //             [`& .${pieArcLabelClasses.root}`]: {
+    //                 fill: 'white',
+    //                 fontWeight: '400',
+    //             },
+
+    //         }}
+    //         slotProps={{
+    //             legend: {
+    //                 direction: 'row',
+    //                 position: { vertical: 'top', horizontal: 'middle' },
+    //                 padding: 0,
+    //             },
+    //         }}
+    //         {...size}
+    //     />
+    // );
+
     return (
-        <PieChart
-            series={[
-                {
-                    arcLabel: (item) => `${item.label} (${item.value})`,
-                    arcLabelMinAngle: 45,
-                    data: selectedValues.map((item, index) => ({
-                        ...item,
-                        color: colors[index % colors.length],
-                    })),
-                },
+        <Grid container justifyContent="center"> {/* Center the PieChart */}
+            <Grid item>
+                <PieChart
+                    series={[
+                        {
+                            arcLabel: (item) => `${item.label} (${item.value})`,
+                            arcLabelMinAngle: 45,
+                            data: selectedValues.map((item, index) => ({
+                                ...item,
+                                color: colors[index % colors.length],
+                            })),
+                        },
 
-            ]}
-            sx={{
-                [`& .${pieArcLabelClasses.root}`]: {
-                    fill: 'white',
-                    fontWeight: '400',
-                },
+                    ]}
+                    sx={{
+                        [`& .${pieArcLabelClasses.root}`]: {
+                            fill: 'white',
+                            fontWeight: '400',
+                        },
 
-            }}
-            slotProps={{
-                legend: {
-                    direction: 'row',
-                    position: { vertical: 'top', horizontal: 'middle' },
-                    padding: 0,
-                },
-            }}
-            {...size}
-        />
+                    }}
+                    slotProps={{
+                        legend: {
+                            direction: 'row',
+                            position: { vertical: 'top', horizontal: 'middle' },
+                            padding: 0,
+                        },
+                    }}
+                    {...size}
+                />
+            </Grid>
+        </Grid>
     );
 }
