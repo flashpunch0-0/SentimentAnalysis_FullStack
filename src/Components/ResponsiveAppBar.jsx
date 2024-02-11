@@ -49,6 +49,7 @@ function ResponsiveAppBar() {
     navigate(`/allanalysis`)
     // redirect to home page
   }
+
   // const appBarStyle = {
   //   // height: "9.8",
   //   // color: "green",
@@ -157,13 +158,14 @@ function ResponsiveAppBar() {
 
                   <Typography onClick={analysisboard} fontFamily="'Nunito', sans-serif" >Analysis Board</Typography>
                 </Button>
-                <Button
+                {/* <Button
                   onClick={handleCloseNavMenu}
                   sx={{ my: 2, color: 'white', display: 'block' }}
                 >
 
                   <Typography onClick={allanalysis} fontFamily="'Nunito', sans-serif" >AllAnalysisboardcomponent</Typography>
-                </Button>
+                </Button> */}
+                {/*  all analysis board page removed  */}
               </>
 
             }

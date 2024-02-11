@@ -36,7 +36,8 @@
   margin: 0;
   padding: 0;
   height: 100vh;
-  background: #ff5301;
+  /* background: #ff5301; */
+  background: #1976d2;
   /* background: #61dafb; */
   /* min-height: fit-content; */
 }

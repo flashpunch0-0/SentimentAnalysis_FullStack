@@ -48,7 +48,7 @@ import * as React from 'react';
 import { PieChart, pieArcLabelClasses } from '@mui/x-charts/PieChart';
 import { Grid } from '@mui/material';
 const size = {
-    width: 550,
+    width: 450,
     height: 530,
 };
 const colors = ['teal', 'magenta', 'gold'];

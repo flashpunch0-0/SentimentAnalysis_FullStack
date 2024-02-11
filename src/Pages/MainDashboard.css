@@ -89,3 +89,27 @@ body {
     opacity: 1;
   }
 }
+
+/* Image.css */
+/* Image.css */
+
+/* Image.css */
+
+/* Image.css */
+
+.image-container {
+  overflow: hidden; /* Hide the overflow to prevent horizontal scrollbar */
+}
+
+.animated-slide-in {
+  animation: slide 1s ease-in-out; /* Apply the animation */
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(100%); /* Start off-screen to the right */
+  }
+  100% {
+    transform: translateX(0%); /* Slide in to the center of the screen */
+  }
+}

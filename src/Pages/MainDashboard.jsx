@@ -2,7 +2,8 @@ import React, { useEffect } from 'react'
 import Cards from "../Components/MainDashboardComponents/Cards";
 import Pie from "../Components/MainDashboardComponents/Pie";
 // import ImageBox from "../Components/MainDashboardComponents/ImageBox";
-import orangewave from "./orangewave.jpg"
+// import orangewave from "./orangewave.jpg"
+import greenwaves from "./greenwaves.jpg"
 import './MainDashboard.css';
 import { Typography, Box } from '@mui/material';
 
@@ -38,9 +39,11 @@ const MainDashboard = () => {
                         Sentiment analysis has applications in various fields, including marketing, customer service, and market research.
                     </Typography>
                 </Box>
-                <Box className="image" ml={2} >
-                    <img src={orangewave} alt="Image" width={400} height={250} />
+                <Box className="image-container" ml={2} >
+                    {/* <img src={orangewave} alt="Image" width={400} height={250} /> */}
+                    <img src={greenwaves} className="animated-slide-in" alt="Image" width={400} height={250} />
                 </Box>
+
 
             </Box>
         </div >
