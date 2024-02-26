@@ -29,6 +29,7 @@ app.get("/products", async (req, res) => {
   }
 });
 const mongoURI = process.env.MONGODB_URI;
+
 mongoose.set("strictQuery", false);
 mongoose
   .connect(mongoURI)
