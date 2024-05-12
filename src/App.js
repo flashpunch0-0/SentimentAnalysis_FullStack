@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AllAnalysisboardcomponent from "./Components/AllAnalysisBoardComponents/AllAnalysisboardcomponent";
 import Footer from "./Components/Footer";
 import List from "./Pages/List";
+import SigninPage from "./Pages/SigninPage";
 
 export const Layout = ({ children }) => {
   return (
@@ -26,7 +27,7 @@ function App() {
         <Routes>
           {/* route for mainpage */}
           <Route
-            path="/"
+            path="/dashboard"
             element={
               <Layout>
                 <MainDashboard />
@@ -47,6 +48,14 @@ function App() {
               <Layout>
                 <List />
               </Layout>
+            }
+          ></Route>
+          <Route
+            path="/"
+            element={
+              // <Layout>
+              <SigninPage />
+              // </Layout>
             }
           ></Route>
         </Routes>
