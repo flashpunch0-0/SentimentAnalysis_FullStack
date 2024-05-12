@@ -17,7 +17,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/blog", (req, res) => {
-  res.send("Hello Blog, My name is kratik");
+  res.send("Hello Blog, this is my group project");
 });
 
 app.get("/products", async (req, res) => {

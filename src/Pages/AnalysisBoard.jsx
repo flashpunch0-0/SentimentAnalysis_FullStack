@@ -4,7 +4,11 @@ import axios from "axios";
 import Pie from "../Components/MainDashboardComponents/Pie"
 import CardComponent from "../Components/AnalysisBoradComponents/CardComponent"
 import { Box, Grid, Container, Card, Paper, Select, MenuItem, CardContent, Typography, styled } from '@mui/material';
-
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
 const StyledContainer = styled('div')({
     maxHeight: '650px', // Set the max height for the container
     overflowY: 'auto', // Enable vertical scrolling
@@ -305,23 +309,45 @@ const AnalysisBoard = () => {
                 <Grid item xs={12} sm={6}>
                     <Paper>
                         <StyledContainer>
-                            {objects.map((obj, index) => (
-                                <Typography
-                                    key={obj._id}
-                                    // className={`${classes.hoverEffect} ${classes.typography}`}
-                                    onMouseEnter={() => handleSelectChange(obj._id)}
-                                    onMouseLeave={handleMouseLeave}
-                                >
-                                    {index + 1}.{obj.content.Text}
-                                </Typography>
-                            ))}
+                            <Table size="small">
+                                <TableHead>
+                                    <TableRow>
+
+                                        <TableCell align="left">ID</TableCell>
+                                        <TableCell>Text</TableCell>
+                                    </TableRow>
+                                </TableHead>
+                                {objects.map((obj, index) => (
+                                    // <Typography
+                                    //     key={obj._id}
+                                    //     // className={`${classes.hoverEffect} ${classes.typography}`}
+                                    //     onMouseEnter={() => handleSelectChange(obj._id)}
+                                    //     onMouseLeave={handleMouseLeave}
+                                    // >
+                                    //     {index + 1}.{obj.content.Text}
+                                    // </Typography>
+
+                                    <TableBody>
+
+                                        <TableRow key={obj._id} onMouseEnter={() => handleSelectChange(obj._id)}
+                                            onMouseLeave={handleMouseLeave}>
+
+                                            <TableCell align="left">{index + 1}</TableCell>
+                                            <TableCell>{obj.content.Text}</TableCell>
+
+                                        </TableRow>
+
+                                    </TableBody>
+
+                                ))}
+                            </Table>
                         </StyledContainer>
                     </Paper>
                 </Grid>
             )}
 
             {/* Right Part: CardComponent */}
-            <Grid item xs={12} sm={6}>
+            {/* <Grid item xs={12} sm={6}>
 
                 <Paper>
                     {selectedObject && (
@@ -353,6 +379,52 @@ const AnalysisBoard = () => {
                                 {"Date :"}
                                 {jsonData.TwwetDate}
                             </Typography>
+                        </>
+                    )}
+                </Paper>
+            </Grid> */}
+
+
+            {/*  */}
+            {/*  */}
+            <Grid item xs={12} sm={6}>
+
+                <Paper>
+
+                    {selectedObject && (
+                        <>
+
+                            <Pie selectedValues={selectedValues} />
+
+
+                            <Table size="small">
+                                <TableHead>
+                                    <TableRow>
+                                        <TableCell>Neutrality %</TableCell>
+                                        <TableCell>Negative %</TableCell>
+                                        <TableCell>Positivity %</TableCell>
+                                        <TableCell>Username</TableCell>
+                                        <TableCell>NotSpamProbability %</TableCell>
+                                        <TableCell align="right">Tweet Date</TableCell>
+                                    </TableRow>
+                                </TableHead>
+                                <TableBody>
+                                    <br />
+                                    <br />
+
+                                    <TableRow key={jsonData.id}>
+
+                                        <TableCell>{(jsonData.Neutral * 100).toFixed(2)}</TableCell>
+                                        <TableCell> {(jsonData.Negative * 100).toFixed(2)}</TableCell>
+                                        <TableCell> {(jsonData.Positive * 100).toFixed(2)}</TableCell>
+                                        <TableCell>{jsonData.User}</TableCell>
+                                        <TableCell> {(jsonData.NotSpamProbability * 100).toFixed(2)}</TableCell>
+                                        {/* <TableCell>{jsonData.NotSpamProbability}</TableCell> */}
+                                        <TableCell align="right">{`${jsonData.TwwetDate}`}</TableCell>
+                                    </TableRow>
+
+                                </TableBody>
+                            </Table>
                         </>
                     )}
                 </Paper>

@@ -4,6 +4,8 @@ import MainDashboard from "./Pages/MainDashboard";
 import AnalysisBoard from "./Pages/AnalysisBoard";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AllAnalysisboardcomponent from "./Components/AllAnalysisBoardComponents/AllAnalysisboardcomponent";
+import Footer from "./Components/Footer";
+import List from "./Pages/List";
 
 export const Layout = ({ children }) => {
   return (
@@ -43,7 +45,7 @@ function App() {
             path="/allanalysis"
             element={
               <Layout>
-                <AllAnalysisboardcomponent />
+                <List />
               </Layout>
             }
           ></Route>

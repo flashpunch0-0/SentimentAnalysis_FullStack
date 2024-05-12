@@ -116,13 +116,13 @@ export default function PieArcLabel({ selectedValues }) {
                         },
 
                     }}
-                    slotProps={{
-                        legend: {
-                            direction: 'row',
-                            position: { vertical: 'top', horizontal: 'middle' },
-                            padding: 0,
-                        },
-                    }}
+                    // slotProps={{
+                    //     legend: {
+                    //         direction: 'row',
+                    //         position: { vertical: 'top', horizontal: 'middle' },
+                    //         padding: 0,
+                    //     },
+                    // }}
                     {...size}
                 />
             </Grid>

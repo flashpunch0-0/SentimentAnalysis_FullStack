@@ -6,6 +6,10 @@ import Pie from "../Components/MainDashboardComponents/Pie";
 import greenwaves from "./greenwaves.jpg"
 import './MainDashboard.css';
 import { Typography, Box } from '@mui/material';
+import Footer from '../Components/Footer';
+import FAQ from '../Components/FAQ';
+import Divider from '@mui/material/Divider';
+import Highlights from '../Components/MainDashboardComponents/Highlights';
 
 const MainDashboard = () => {
     return (
@@ -45,6 +49,21 @@ const MainDashboard = () => {
                 </Box>
 
 
+            </Box>
+            <Box>
+
+                <Highlights />
+                <FAQ />
+                <Divider />
+            </Box>
+            <Box
+                sx={{
+
+                    // background: "#1976d2",
+
+                }}>
+
+                <Footer />
             </Box>
         </div >
     )

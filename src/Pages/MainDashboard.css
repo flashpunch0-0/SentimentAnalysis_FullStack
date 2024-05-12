@@ -7,12 +7,18 @@ body {
 }
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
 
+@font-face {
+  font-family: "headerFont";
+  src: local("CustomFont"),
+    url(".././Components/Fonts/Inter-Regular.ttf") format("truetype"); /* adjust the path accordingly */
+}
 .main-container {
   /* display: flex; */
   font-family: "Montserrat", sans-serif;
+
   padding: 0;
   margin: 0;
-  /* height: 90vh; */
+  /* height: 100vh; */
   /* min-height: 9vh; */
 }
 
