@@ -37,12 +37,13 @@ const List = () => {
         { field: 'user', headerName: 'User', width: 150 },
         { field: 'tweetDate', headerName: 'Tweet Date', width: 110 },
         { field: 'highestLabel', headerName: 'Highest Label', width: 100 },
-        { field: 'highestSpamProbability', headerName: 'Highest Spam Probability', width: 120 },
-        { field: 'negativePercentage', headerName: 'Negative %', width: 120 },
-        { field: 'neutralPercentage', headerName: 'Neutral %', width: 120 },
-        { field: 'notSpamProbability', headerName: 'Not Spam Probability', width: 120 },
-        { field: 'positivePercentage', headerName: 'Positive %', width: 120 },
-        { field: 'spamProbability', headerName: 'Spam Probability', width: 120 },
+        { field: 'highestSpamProbability', headerName: 'Highest Spam Probability', width: 100 },
+        { field: 'negativePercentage', headerName: 'Negative %', width: 100 },
+        { field: 'neutralPercentage', headerName: 'Neutral %', width: 100 },
+        { field: 'notSpamProbability', headerName: 'Not Spam Probability', width: 100 },
+        { field: 'positivePercentage', headerName: 'Positive %', width: 100 },
+        { field: 'spamProbability', headerName: 'Spam Probability', width: 100 },
+        { field: 'spamRemark', headerName: 'Spam Remark', width: 120 },
     ]
 
     const rows = objects.map((item, index) => ({
@@ -57,6 +58,7 @@ const List = () => {
         notSpamProbability: item.content['Not Spam Probability'],
         positivePercentage: item.content['Positive %'],
         spamProbability: item.content['Spam Probability'],
+        spamRemark: item.content['Spam Remark'],
     }));
 
 
